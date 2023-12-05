@@ -12,9 +12,11 @@ namespace Chess
 {
     public partial class Form1 : Form
     {
+        castle kale = new castle();
         public Form1()
         {
             InitializeComponent();
+
         }
         bool isFirstClick = true;
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -23,8 +25,7 @@ namespace Chess
             if (isFirstClick)
             {
                 // İlk tıklama
-                pictureBox2.BackColor = Color.Black;
-                pictureBox16.BackColor = Color.Black;// veya başka bir resim veya null olarak ayarlayabilirsiniz
+                kale.kale2();
             }
             else
             {
@@ -34,6 +35,7 @@ namespace Chess
                 tempImage = pictureBox1.Image;
                 pictureBox1.Image = pictureBox2.Image;
                 pictureBox2.Image = tempImage;
+              
             }
 
             isFirstClick = !isFirstClick;
@@ -67,5 +69,30 @@ namespace Chess
 
             isFirstClick = !isFirstClick;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hoşgeldiniz", "Oyun Başlıyor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+    
+    }
+    public class castle
+    {
+        Image tempImage;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox16;
+        public void kale(PictureBox pictureBox2, PictureBox pictureBox16)
+      {
+            this.pictureBox2 = pictureBox2;
+            this.pictureBox16 = pictureBox16;
+
+        }
+        public void kale2()
+        {
+            pictureBox2.BackColor = Color.Black;
+            pictureBox16.BackColor = Color.Black;
+           
+        }
+
     }
 }
