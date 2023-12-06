@@ -90,11 +90,6 @@ namespace Chess
             pictureBox15 = pb15;
             pictureBox16 = pb16;
         }
-        public virtual void mesaj()
-        {
-           MessageBox.Show("Hareket alanı kapalı", "Kale", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-        }
     }
     interface Ikale1
     {
@@ -104,6 +99,7 @@ namespace Chess
     public class castle : piece, Ikale1
     {
         bool isFirstClick = true;
+        
         public void kale1(PictureBox pictureBox8, PictureBox pictureBox9, PictureBox pictureBox7)
         {
             this.pictureBox8 = pictureBox8;
@@ -115,15 +111,15 @@ namespace Chess
             {
                 // İlk tıklama
                 pictureBox9.BackColor = Color.LightPink;
-                pictureBox8.BackColor = Color.LightPink;// 
-                MessageBox.Show("Önünde bir taş olmadığı takdirde ileriye, geriye, sola ve sağa doğru istenildiği kadar gidilebilir. ", "Kale", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                pictureBox8.BackColor = Color.LightPink;// açık pembe
+                
 
 
             }
             else
             {
                 // İkinci tıklama
-                MessageBox.Show("Hareket alanı kapalı", "Kale", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               
                 pictureBox9.BackColor = Color.Transparent;
                 pictureBox8.BackColor = Color.Transparent;
                 /* tempImage = pictureBox7.Image;
