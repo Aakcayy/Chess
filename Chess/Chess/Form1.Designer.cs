@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbKale = new System.Windows.Forms.PictureBox();
+            this.pbAt = new System.Windows.Forms.PictureBox();
             this.pbVezir = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pbFil = new System.Windows.Forms.PictureBox();
+            this.pbFil2 = new System.Windows.Forms.PictureBox();
+            this.pbSah = new System.Windows.Forms.PictureBox();
+            this.pbKale2 = new System.Windows.Forms.PictureBox();
+            this.pbPiyon8 = new System.Windows.Forms.PictureBox();
+            this.pbPiyon7 = new System.Windows.Forms.PictureBox();
+            this.pbPiyon6 = new System.Windows.Forms.PictureBox();
+            this.pbPiyon5 = new System.Windows.Forms.PictureBox();
+            this.pbPiyon4 = new System.Windows.Forms.PictureBox();
+            this.pbPiyon3 = new System.Windows.Forms.PictureBox();
+            this.pbPiyon2 = new System.Windows.Forms.PictureBox();
+            this.pbPiyon1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pbAt2 = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
@@ -94,22 +94,22 @@
             this.pictureBox63 = new System.Windows.Forms.PictureBox();
             this.pictureBox64 = new System.Windows.Forms.PictureBox();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbKale)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVezir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFil2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSah)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbKale2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiyon8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiyon7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiyon6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiyon5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiyon4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiyon3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiyon2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiyon1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAt2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
@@ -160,27 +160,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pbKale
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 810);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(136, 116);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbKale.Image = ((System.Drawing.Image)(resources.GetObject("pbKale.Image")));
+            this.pbKale.Location = new System.Drawing.Point(3, 810);
+            this.pbKale.Name = "pbKale";
+            this.pbKale.Size = new System.Drawing.Size(136, 116);
+            this.pbKale.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbKale.TabIndex = 0;
+            this.pbKale.TabStop = false;
+            this.pbKale.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox2
+            // pbAt
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(136, 810);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(136, 116);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pbAt.Image = ((System.Drawing.Image)(resources.GetObject("pbAt.Image")));
+            this.pbAt.Location = new System.Drawing.Point(136, 810);
+            this.pbAt.Name = "pbAt";
+            this.pbAt.Size = new System.Drawing.Size(136, 116);
+            this.pbAt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAt.TabIndex = 1;
+            this.pbAt.TabStop = false;
+            this.pbAt.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pbVezir
             // 
@@ -193,137 +193,137 @@
             this.pbVezir.TabStop = false;
             this.pbVezir.Click += new System.EventHandler(this.pbVezir_Click);
             // 
-            // pictureBox4
+            // pbFil
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(273, 810);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(136, 116);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pbFil.Image = ((System.Drawing.Image)(resources.GetObject("pbFil.Image")));
+            this.pbFil.Location = new System.Drawing.Point(273, 810);
+            this.pbFil.Name = "pbFil";
+            this.pbFil.Size = new System.Drawing.Size(136, 116);
+            this.pbFil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFil.TabIndex = 2;
+            this.pbFil.TabStop = false;
+            this.pbFil.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // pictureBox5
+            // pbFil2
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(674, 810);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(136, 116);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 5;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.pbFil2.Image = ((System.Drawing.Image)(resources.GetObject("pbFil2.Image")));
+            this.pbFil2.Location = new System.Drawing.Point(674, 810);
+            this.pbFil2.Name = "pbFil2";
+            this.pbFil2.Size = new System.Drawing.Size(136, 116);
+            this.pbFil2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFil2.TabIndex = 5;
+            this.pbFil2.TabStop = false;
+            this.pbFil2.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // pictureBox6
+            // pbSah
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(541, 810);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(136, 116);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 4;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.pbSah.Image = ((System.Drawing.Image)(resources.GetObject("pbSah.Image")));
+            this.pbSah.Location = new System.Drawing.Point(541, 810);
+            this.pbSah.Name = "pbSah";
+            this.pbSah.Size = new System.Drawing.Size(136, 116);
+            this.pbSah.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSah.TabIndex = 4;
+            this.pbSah.TabStop = false;
+            this.pbSah.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
-            // pictureBox7
+            // pbKale2
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(944, 810);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(145, 116);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 7;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            this.pbKale2.Image = ((System.Drawing.Image)(resources.GetObject("pbKale2.Image")));
+            this.pbKale2.Location = new System.Drawing.Point(944, 810);
+            this.pbKale2.Name = "pbKale2";
+            this.pbKale2.Size = new System.Drawing.Size(145, 116);
+            this.pbKale2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbKale2.TabIndex = 7;
+            this.pbKale2.TabStop = false;
+            this.pbKale2.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
-            // pictureBox9
+            // pbPiyon8
             // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(944, 703);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(145, 108);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 15;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            this.pbPiyon8.Image = ((System.Drawing.Image)(resources.GetObject("pbPiyon8.Image")));
+            this.pbPiyon8.Location = new System.Drawing.Point(944, 703);
+            this.pbPiyon8.Name = "pbPiyon8";
+            this.pbPiyon8.Size = new System.Drawing.Size(145, 108);
+            this.pbPiyon8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPiyon8.TabIndex = 15;
+            this.pbPiyon8.TabStop = false;
+            this.pbPiyon8.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
-            // pictureBox10
+            // pbPiyon7
             // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(811, 703);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(136, 108);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 14;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            this.pbPiyon7.Image = ((System.Drawing.Image)(resources.GetObject("pbPiyon7.Image")));
+            this.pbPiyon7.Location = new System.Drawing.Point(811, 703);
+            this.pbPiyon7.Name = "pbPiyon7";
+            this.pbPiyon7.Size = new System.Drawing.Size(136, 108);
+            this.pbPiyon7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPiyon7.TabIndex = 14;
+            this.pbPiyon7.TabStop = false;
+            this.pbPiyon7.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
-            // pictureBox11
+            // pbPiyon6
             // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(674, 703);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(136, 108);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 13;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
+            this.pbPiyon6.Image = ((System.Drawing.Image)(resources.GetObject("pbPiyon6.Image")));
+            this.pbPiyon6.Location = new System.Drawing.Point(674, 703);
+            this.pbPiyon6.Name = "pbPiyon6";
+            this.pbPiyon6.Size = new System.Drawing.Size(136, 108);
+            this.pbPiyon6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPiyon6.TabIndex = 13;
+            this.pbPiyon6.TabStop = false;
+            this.pbPiyon6.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
-            // pictureBox12
+            // pbPiyon5
             // 
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(541, 703);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(136, 108);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 12;
-            this.pictureBox12.TabStop = false;
-            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
+            this.pbPiyon5.Image = ((System.Drawing.Image)(resources.GetObject("pbPiyon5.Image")));
+            this.pbPiyon5.Location = new System.Drawing.Point(541, 703);
+            this.pbPiyon5.Name = "pbPiyon5";
+            this.pbPiyon5.Size = new System.Drawing.Size(136, 108);
+            this.pbPiyon5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPiyon5.TabIndex = 12;
+            this.pbPiyon5.TabStop = false;
+            this.pbPiyon5.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
-            // pictureBox13
+            // pbPiyon4
             // 
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(406, 703);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(136, 108);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 11;
-            this.pictureBox13.TabStop = false;
-            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
+            this.pbPiyon4.Image = ((System.Drawing.Image)(resources.GetObject("pbPiyon4.Image")));
+            this.pbPiyon4.Location = new System.Drawing.Point(406, 703);
+            this.pbPiyon4.Name = "pbPiyon4";
+            this.pbPiyon4.Size = new System.Drawing.Size(136, 108);
+            this.pbPiyon4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPiyon4.TabIndex = 11;
+            this.pbPiyon4.TabStop = false;
+            this.pbPiyon4.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
-            // pictureBox14
+            // pbPiyon3
             // 
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(273, 703);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(136, 108);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 10;
-            this.pictureBox14.TabStop = false;
-            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
+            this.pbPiyon3.Image = ((System.Drawing.Image)(resources.GetObject("pbPiyon3.Image")));
+            this.pbPiyon3.Location = new System.Drawing.Point(273, 703);
+            this.pbPiyon3.Name = "pbPiyon3";
+            this.pbPiyon3.Size = new System.Drawing.Size(136, 108);
+            this.pbPiyon3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPiyon3.TabIndex = 10;
+            this.pbPiyon3.TabStop = false;
+            this.pbPiyon3.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
-            // pictureBox15
+            // pbPiyon2
             // 
-            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(136, 703);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(136, 108);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 9;
-            this.pictureBox15.TabStop = false;
-            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
+            this.pbPiyon2.Image = ((System.Drawing.Image)(resources.GetObject("pbPiyon2.Image")));
+            this.pbPiyon2.Location = new System.Drawing.Point(136, 703);
+            this.pbPiyon2.Name = "pbPiyon2";
+            this.pbPiyon2.Size = new System.Drawing.Size(136, 108);
+            this.pbPiyon2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPiyon2.TabIndex = 9;
+            this.pbPiyon2.TabStop = false;
+            this.pbPiyon2.Click += new System.EventHandler(this.pictureBox15_Click);
             // 
-            // pictureBox16
+            // pbPiyon1
             // 
-            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(3, 703);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(136, 108);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 8;
-            this.pictureBox16.TabStop = false;
-            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
+            this.pbPiyon1.Image = ((System.Drawing.Image)(resources.GetObject("pbPiyon1.Image")));
+            this.pbPiyon1.Location = new System.Drawing.Point(3, 703);
+            this.pbPiyon1.Name = "pbPiyon1";
+            this.pbPiyon1.Size = new System.Drawing.Size(136, 108);
+            this.pbPiyon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPiyon1.TabIndex = 8;
+            this.pbPiyon1.TabStop = false;
+            this.pbPiyon1.Click += new System.EventHandler(this.pictureBox16_Click);
             // 
             // button1
             // 
@@ -336,17 +336,17 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox8
+            // pbAt2
             // 
-            this.pictureBox8.BackColor = System.Drawing.Color.White;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(811, 810);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(136, 116);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 6;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            this.pbAt2.BackColor = System.Drawing.Color.White;
+            this.pbAt2.Image = ((System.Drawing.Image)(resources.GetObject("pbAt2.Image")));
+            this.pbAt2.Location = new System.Drawing.Point(811, 810);
+            this.pbAt2.Name = "pbAt2";
+            this.pbAt2.Size = new System.Drawing.Size(136, 116);
+            this.pbAt2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAt2.TabIndex = 6;
+            this.pbAt2.TabStop = false;
+            this.pbAt2.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBox17
             // 
@@ -858,41 +858,41 @@
             this.Controls.Add(this.pictureBox21);
             this.Controls.Add(this.pictureBox22);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.pictureBox11);
-            this.Controls.Add(this.pictureBox12);
-            this.Controls.Add(this.pictureBox13);
-            this.Controls.Add(this.pictureBox14);
-            this.Controls.Add(this.pictureBox15);
-            this.Controls.Add(this.pictureBox16);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pbPiyon8);
+            this.Controls.Add(this.pbPiyon7);
+            this.Controls.Add(this.pbPiyon6);
+            this.Controls.Add(this.pbPiyon5);
+            this.Controls.Add(this.pbPiyon4);
+            this.Controls.Add(this.pbPiyon3);
+            this.Controls.Add(this.pbPiyon2);
+            this.Controls.Add(this.pbPiyon1);
+            this.Controls.Add(this.pbKale2);
+            this.Controls.Add(this.pbAt2);
+            this.Controls.Add(this.pbFil2);
+            this.Controls.Add(this.pbSah);
             this.Controls.Add(this.pbVezir);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbFil);
+            this.Controls.Add(this.pbAt);
+            this.Controls.Add(this.pbKale);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbKale)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVezir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFil2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSah)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbKale2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiyon8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiyon7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiyon6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiyon5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiyon4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiyon3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiyon2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiyon1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAt2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
@@ -947,23 +947,23 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbKale;
+        private System.Windows.Forms.PictureBox pbAt;
         private System.Windows.Forms.PictureBox pbVezir;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.PictureBox pbFil;
+        private System.Windows.Forms.PictureBox pbFil2;
+        private System.Windows.Forms.PictureBox pbSah;
+        private System.Windows.Forms.PictureBox pbKale2;
+        private System.Windows.Forms.PictureBox pbPiyon8;
+        private System.Windows.Forms.PictureBox pbPiyon7;
+        private System.Windows.Forms.PictureBox pbPiyon6;
+        private System.Windows.Forms.PictureBox pbPiyon5;
+        private System.Windows.Forms.PictureBox pbPiyon4;
+        private System.Windows.Forms.PictureBox pbPiyon3;
+        private System.Windows.Forms.PictureBox pbPiyon2;
+        private System.Windows.Forms.PictureBox pbPiyon1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pbAt2;
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.PictureBox pictureBox18;
         private System.Windows.Forms.PictureBox pictureBox19;

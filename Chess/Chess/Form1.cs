@@ -28,7 +28,7 @@ namespace Chess
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            kale.kale2(pictureBox16, pictureBox2);
+            kale.kale2(pbPiyon1, pbAt);
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -38,7 +38,7 @@ namespace Chess
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            kale.kale1(pictureBox9, pictureBox8);
+            kale.kale1(pbPiyon8, pbAt2);
 
         }
 
@@ -51,22 +51,22 @@ namespace Chess
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            fil.fil1(pictureBox13, pictureBox15);
+            fil.fil1(pbPiyon4, pbPiyon2);
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            fil.fil2(pictureBox10, pictureBox12);
+            fil.fil2(pbPiyon7, pbPiyon5);
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            sah.sah(pbVezir, pictureBox5, pictureBox11, pictureBox12, pictureBox13);
+            sah.sah(pbVezir, pbFil2, pbPiyon6, pbPiyon5, pbPiyon4);
         }
 
         private void pbVezir_Click(object sender, EventArgs e)
         {
-            vezir.vezir(pictureBox4, pictureBox6, pictureBox12, pictureBox13, pictureBox14);
+            vezir.vezir(pbFil, pbSah, pbPiyon5, pbPiyon4, pbPiyon3);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -81,52 +81,52 @@ namespace Chess
 
         private void pictureBox16_Click(object sender, EventArgs e)
         {
-            piyon.piyon1(pictureBox20, pictureBox22);
+            piyon.piyon1(pictureBox22, pictureBox28);
         }
 
         private void pictureBox15_Click(object sender, EventArgs e)
         {
-            piyon.piyon2(pictureBox21, pictureBox22);
+            piyon.piyon2(pictureBox21, pictureBox27);
         }
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
-            piyon.piyon1(pictureBox17, pictureBox21);
+            piyon.piyon3(pictureBox20, pictureBox26);
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            piyon.piyon1(pictureBox23,pictureBox24);
+            piyon.piyon4(pictureBox19,pictureBox25);
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            piyon.piyon1(pictureBox25, pictureBox26);
+            piyon.piyon5(pictureBox18, pictureBox24);
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            piyon.piyon1(pictureBox27, pictureBox28);
+            piyon.piyon6(pictureBox17, pictureBox23);
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            piyon.piyon1(pictureBox29, pictureBox30);
+            piyon.piyon7(pictureBox32, pictureBox30);
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            piyon.piyon1(pictureBox31, pictureBox32);
+            piyon.piyon8(pictureBox31, pictureBox29);
         }
     }
     public class piece
     {
-        public PictureBox pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9;
-        public PictureBox pictureBox10, pictureBox11, pictureBox12, pictureBox15, pictureBox13, pictureBox14, pictureBox16, pictureBox17, pictureBox20, pictureBox22, pictureBox28, pictureBox23,pictureBox21,pictureBox27;
+        public PictureBox pbKale, pbAt, pbFil, pbVezir, pbSah, pbFil2, pbAt2, pbKale2, pbPiyon8;
+        public PictureBox pbPiyon7, pbPiyon6, pbPiyon5, pbPiyon2, pbPiyon4, pbPiyon3, pbPiyon1, pictureBox17, pictureBox20, pictureBox22, pictureBox28, pictureBox23,pictureBox21,pictureBox27;
         public PictureBox pictureBox29, pictureBox30, pictureBox31, pictureBox32, pictureBox18, pictureBox19, pictureBox24, pictureBox25, pictureBox26;
         public string baslik1;
         public string icerik1;
-       
+        public int tıklanmaSayisi=1; 
 
 
         public virtual void tas(string baslik, string icerik) //piece sınıfında tas adlı metot virtual olarak tanımladım
@@ -140,25 +140,25 @@ namespace Chess
     interface Ikale
     {
 
-        void kale1(PictureBox pictureBox9, PictureBox pictureBox8);
+        void kale1(PictureBox pbPiyon8, PictureBox pictureBox8);
         void kale2(PictureBox pictureBox16, PictureBox pictureBox2);
     }
    
     interface Ifil
     {
-        void fil1(PictureBox pictureBox13, PictureBox pictureBox15);
-        void fil2(PictureBox pictureBox12, PictureBox pictureBox13);
+        void fil1(PictureBox pbPiyon4, PictureBox pbPiyon2);
+        void fil2(PictureBox pbPiyon5, PictureBox pbPiyon4);
     }
     
     interface Isah
     {
 
-        void sah(PictureBox pbVezir, PictureBox pictureBox5, PictureBox pictureBox11, PictureBox pictureBox12, PictureBox pictureBox13);
+        void sah(PictureBox pbVezir, PictureBox pbSah, PictureBox pbPiyon6, PictureBox pbPiyon5, PictureBox pbPiyon4);
     }
     interface Ivezir
     {
 
-        void vezir(PictureBox pictureBox4, PictureBox pictureBox6, PictureBox pictureBox12, PictureBox pictureBox13, PictureBox pictureBox14);
+        void vezir(PictureBox pbVezir, PictureBox pbFil2, PictureBox pbPiyon5, PictureBox pbPiyon4, PictureBox pbPiyon3);
     }
     interface IAt
     {
@@ -172,23 +172,29 @@ namespace Chess
 
         void piyon1(PictureBox pictureBox22, PictureBox pictureBox28);
         void piyon2(PictureBox pictureBox21, PictureBox pictureBox27);
+        void piyon3(PictureBox pictureBox20, PictureBox pictureBox26);
+        void piyon4(PictureBox pictureBox19, PictureBox pictureBox25);
+        void piyon5(PictureBox pictureBox18, PictureBox pictureBox24);
+        void piyon6(PictureBox pictureBox17, PictureBox pictureBox23);
+        void piyon7(PictureBox pictureBox32, PictureBox pictureBox30);
+        void piyon8(PictureBox pictureBox31, PictureBox pictureBox29);
     }
     public class castle : piece, Ikale // < Çoklu kalıtım yapıldı,castle sınıfı, piece sınıfından miras alarak tas metodunu override etti.
     {
         bool isFirstClick = true;
 
-        public void kale1(PictureBox pictureBox9, PictureBox pictureBox8)
+        public void kale1(PictureBox pbPiyon8, PictureBox pbKale2)
         {
-            this.pictureBox9 = pictureBox9;
-            this.pictureBox8 = pictureBox8;
+            this.pbPiyon8 = pbPiyon8;
+            this.pbKale2 = pbKale2;
 
 
             if (isFirstClick) //ilk tıklama
             {
-                pictureBox8.Image = null;//Resmi kaldır
-                pictureBox9.Image = null;
-                pictureBox8.BackColor = Color.LightPink;
-                pictureBox9.BackColor = Color.LightPink;// açık pembe > gidebileceği yönler kapalı anlamında
+                pbKale2.Image = null;//Resmi kaldır
+                pbPiyon8.Image = null;
+                pbKale2.BackColor = Color.LightPink;
+                pbPiyon8.BackColor = Color.LightPink;// açık pembe > gidebileceği yönler kapalı anlamında
                                                         // mavi > gidebileceği yerler gösterilir
                 MessageBox.Show("Hata", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -204,10 +210,10 @@ namespace Chess
                 //Farklı sınıflar için farklı parametreler alarak çalışır
                 string imagePath = "C:\\Users\\ahmet\\Desktop\\Proglama\\Ders-8\\Chess\\Piece\\Knight.jpg";
                 Image image = Image.FromFile(imagePath);
-                pictureBox8.Image = image;
+                pbKale2.Image = image;
                 string imagePath2 = "C:\\Users\\ahmet\\Desktop\\Proglama\\Ders-8\\Chess\\Piece\\pawn.jpg";
                 Image image2 = Image.FromFile(imagePath2);
-                pictureBox9.Image = image2;
+                pbPiyon8.Image = image2;
                 /* tempImage = pictureBox7.Image;
                  pictureBox7.Image = pictureBox8.Image;
                  pictureBox8.Image = tempImage;*/
@@ -216,18 +222,18 @@ namespace Chess
 
             isFirstClick = !isFirstClick;
         }
-        public void kale2(PictureBox pictureBox16, PictureBox pictureBox2)
+        public void kale2(PictureBox pbPiyon1, PictureBox pbAt)
         {
-            this.pictureBox16 = pictureBox16;
-            this.pictureBox2 = pictureBox2;
+            this.pbPiyon1 = pbPiyon1;
+            this.pbAt = pbAt;
 
 
             if (isFirstClick)  // İlk tıklama
             {
-                pictureBox16.Image = null;//Resmi kaldır
-                pictureBox2.Image = null;
-                pictureBox16.BackColor = Color.LightPink;
-                pictureBox2.BackColor = Color.LightPink;// açık pembe > gidebileceği yönler kapalı anlamında
+                pbPiyon1.Image = null;//Resmi kaldır
+                pbAt.Image = null;
+                pbPiyon1.BackColor = Color.LightPink;
+                pbAt.BackColor = Color.LightPink;// açık pembe > gidebileceği yönler kapalı anlamında
                                                         // mavi > gidebileceği yerler gösterilir
                 MessageBox.Show("Hata", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -236,10 +242,10 @@ namespace Chess
                 tas("Kale", "önünde bir taş olmadığı takdirde ileriye, geriye, sola ve sağa doğru istenildiği kadar gidilebilir");
                 string imagePath = "C:\\Users\\ahmet\\Desktop\\Proglama\\Ders-8\\Chess\\Piece\\Knight.jpg";
                 Image image = Image.FromFile(imagePath);
-                pictureBox2.Image = image;
+                pbAt.Image = image;
                 string imagePath2 = "C:\\Users\\ahmet\\Desktop\\Proglama\\Ders-8\\Chess\\Piece\\pawn.jpg";
                 Image image2 = Image.FromFile(imagePath2);
-                pictureBox16.Image = image2;
+                pbPiyon1.Image = image2;
             }
 
             isFirstClick = !isFirstClick;
@@ -249,22 +255,22 @@ namespace Chess
 
     }
     public class Fil : piece, Ifil
-    {//29 10 7
+    {
         bool isFirstClick = true;
 
-        public void fil1(PictureBox pictureBox13, PictureBox pictureBox15)
+        public void fil1(PictureBox pbPiyon4, PictureBox pbPiyon2)
         {
-            this.pictureBox13 = pictureBox13;
-            this.pictureBox15 = pictureBox15;
+            this.pbPiyon4 = pbPiyon4;
+            this.pbPiyon2 = pbPiyon2;
 
 
             if (isFirstClick) //ilk tıklama
             {
-                pictureBox15.Image = null;//Resmi kaldır
-                pictureBox13.Image = null;
-                pictureBox15.BackColor = Color.LightPink;
-                pictureBox13.BackColor = Color.LightPink;// açık pembe > gidebileceği yönler kapalı anlamında
-                                                         // mavi > gidebileceği yerler gösterilir
+                pbPiyon2.Image = null;//Resmi kaldır
+                pbPiyon4.Image = null;
+                pbPiyon2.BackColor = Color.LightPink;
+                pbPiyon4.BackColor = Color.LightPink;// açık pembe > gidebileceği yönler kapalı anlamında
+                                                       
                 MessageBox.Show("Hata", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
@@ -274,30 +280,27 @@ namespace Chess
                 tas("Fil", "Her zaman çapraz gider ve kesinlikle önüne çıkan başka bir taşın üzerinden atlayamaz");
                 string imagePath = "C:\\Users\\ahmet\\Desktop\\Proglama\\Ders-8\\Chess\\Piece\\pawn.jpg";
                 Image image = Image.FromFile(imagePath);
-                pictureBox15.Image = image;
+                pbPiyon2.Image = image;
                 string imagePath2 = "C:\\Users\\ahmet\\Desktop\\Proglama\\Ders-8\\Chess\\Piece\\pawn.jpg";
                 Image image2 = Image.FromFile(imagePath2);
-                pictureBox13.Image = image2;
-                /* tempImage = pictureBox7.Image;
-                 pictureBox7.Image = pictureBox8.Image;
-                 pictureBox8.Image = tempImage;*/
-
+                pbPiyon4.Image = image2;
+                
             }
 
             isFirstClick = !isFirstClick;
         }
-        public void fil2(PictureBox pictureBox10, PictureBox pictureBox12)
+        public void fil2(PictureBox pbPiyon7, PictureBox pbPiyon5)
         {
-            this.pictureBox10 = pictureBox10;
-            this.pictureBox12 = pictureBox12;
+            this.pbPiyon7 = pbPiyon7;
+            this.pbPiyon5 = pbPiyon5;
 
 
             if (isFirstClick)  // İlk tıklama
             {
-                pictureBox10.Image = null;
-                pictureBox12.Image = null;
-                pictureBox10.BackColor = Color.LightPink;
-                pictureBox12.BackColor = Color.LightPink;
+                pbPiyon7.Image = null;
+                pbPiyon5.Image = null;
+                pbPiyon7.BackColor = Color.LightPink;
+                pbPiyon5.BackColor = Color.LightPink;
                 MessageBox.Show("Hata", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else // İkinci tıklama
@@ -305,10 +308,10 @@ namespace Chess
                 tas("Fil", "Her zaman çapraz gider ve kesinlikle önüne çıkan başka bir taşın üzerinden atlayamaz");
                 string imagePath = "C:\\Users\\ahmet\\Desktop\\Proglama\\Ders-8\\Chess\\Piece\\pawn.jpg";
                 Image image = Image.FromFile(imagePath);
-                pictureBox10.Image = image;
+                pbPiyon7.Image = image;
                 string imagePath2 = "C:\\Users\\ahmet\\Desktop\\Proglama\\Ders-8\\Chess\\Piece\\pawn.jpg";
                 Image image2 = Image.FromFile(imagePath2);
-                pictureBox12.Image = image2;
+                pbPiyon5.Image = image2;
             }
 
             isFirstClick = !isFirstClick;
@@ -321,27 +324,27 @@ namespace Chess
     {
         bool isFirstClick = true;
 
-        public void sah(PictureBox pictureBox3, PictureBox pictureBox5, PictureBox pictureBox11, PictureBox pictureBox12, PictureBox pictureBox13)
+        public void sah(PictureBox pbFil, PictureBox pbSah, PictureBox pbPiyon6, PictureBox pbPiyon5, PictureBox pbPiyon4)
         {
-            this.pictureBox3 = pictureBox3;
-            this.pictureBox5 = pictureBox5;
-            this.pictureBox11 = pictureBox11;
-            this.pictureBox12 = pictureBox12;
-            this.pictureBox13 = pictureBox13;
+            this.pbFil= pbFil;
+            this.pbSah = pbSah;
+            this.pbPiyon6 = pbPiyon6;
+            this.pbPiyon5 = pbPiyon5;
+            this.pbPiyon4 = pbPiyon4;
 
 
             if (isFirstClick) //ilk tıklama
             {
-                pictureBox3.Image = null;
-                pictureBox5.Image = null;
-                pictureBox11.Image = null;
-                pictureBox12.Image = null;
-                pictureBox13.Image = null;
-                pictureBox3.BackColor = Color.LightPink;
-                pictureBox5.BackColor = Color.LightPink;// açık pembe > gidebileceği yönler kapalı anlamında
-                pictureBox11.BackColor = Color.LightPink;
-                pictureBox12.BackColor = Color.LightPink;
-                pictureBox13.BackColor = Color.LightPink;
+                pbFil.Image = null;
+                pbSah.Image = null;
+                pbPiyon6.Image = null;
+                pbPiyon5.Image = null;
+                pbPiyon4.Image = null;
+                pbFil.BackColor = Color.LightPink;
+                pbSah.BackColor = Color.LightPink;// açık pembe > gidebileceği yönler kapalı anlamında
+                pbPiyon6.BackColor = Color.LightPink;
+                pbPiyon5.BackColor = Color.LightPink;
+                pbPiyon4.BackColor = Color.LightPink;
                 MessageBox.Show("Hata", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
@@ -361,11 +364,11 @@ namespace Chess
                 Image image4 = Image.FromFile(imagePath4);
                 Image image5 = Image.FromFile(imagePath5);
 
-                pictureBox5.Image = image;
-                pictureBox3.Image = image2;
-                pictureBox11.Image = image3;
-                pictureBox12.Image = image4;
-                pictureBox13.Image = image5;
+                pbSah.Image = image;
+                pbFil.Image = image2;
+                pbPiyon6.Image = image3;
+                pbPiyon5.Image = image4;
+                pbPiyon4.Image = image5;
             }
 
             isFirstClick = !isFirstClick;
@@ -375,34 +378,34 @@ namespace Chess
     {
         bool isFirstClick = true;
 
-        public void vezir(PictureBox pictureBox4, PictureBox pictureBox6, PictureBox pictureBox12, PictureBox pictureBox13, PictureBox pictureBox14)
+        public void vezir(PictureBox pbVezir, PictureBox pbFil2, PictureBox pbPiyon5, PictureBox pbPiyon4, PictureBox pbPiyon3)
         {
-            this.pictureBox4 = pictureBox4;
-            this.pictureBox6 = pictureBox6;
-            this.pictureBox12 = pictureBox12;
-            this.pictureBox13 = pictureBox13;
-            this.pictureBox14 = pictureBox14;
+            this.pbVezir = pbVezir;
+            this.pbFil2 = pbFil2;
+            this.pbPiyon5 = pbPiyon5;
+            this.pbPiyon4 = pbPiyon4;
+            this.pbPiyon3 = pbPiyon3;
 
 
             if (isFirstClick) //ilk tıklama
             {
-                pictureBox4.Image = null;
-                pictureBox6.Image = null;
-                pictureBox12.Image = null;
-                pictureBox13.Image = null;
-                pictureBox14.Image = null;
-                pictureBox4.BackColor = Color.LightPink;
-                pictureBox6.BackColor = Color.LightPink;// açık pembe > gidebileceği yönler kapalı anlamında
-                pictureBox12.BackColor = Color.LightPink;
-                pictureBox13.BackColor = Color.LightPink;
-                pictureBox14.BackColor = Color.LightPink;
+                pbVezir.Image = null;
+                pbFil2.Image = null;
+                pbPiyon5.Image = null;
+                pbPiyon4.Image = null;
+                pbPiyon3.Image = null;
+                pbVezir.BackColor = Color.LightPink;
+                pbFil2.BackColor = Color.LightPink;// açık pembe > gidebileceği yönler kapalı anlamında
+                pbPiyon5.BackColor = Color.LightPink;
+                pbPiyon4.BackColor = Color.LightPink;
+                pbPiyon3.BackColor = Color.LightPink;
                 MessageBox.Show("Hata", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
             else // İkinci tıklama
             {
-                tas("Şah", "Her yöne tek kare ilerleyebilir ancak sadece bir kare öteye hareket edebilir.");
+                tas("Vezir", "Satranç oyunundaki saldırı alanı en geniş taştır.");
                 string imagePath = "C:\\Users\\ahmet\\Desktop\\Proglama\\Ders-8\\Chess\\Piece\\Bishop.jpg";//fil
                 string imagePath2 = "C:\\Users\\ahmet\\Desktop\\Proglama\\Ders-8\\Chess\\Piece\\King.jpeg";//şah
                 string imagePath3 = "C:\\Users\\ahmet\\Desktop\\Proglama\\Ders-8\\Chess\\Piece\\pawn.jpg";
@@ -415,11 +418,11 @@ namespace Chess
                 Image image4 = Image.FromFile(imagePath4);
                 Image image5 = Image.FromFile(imagePath5);
 
-                pictureBox4.Image = image;
-                pictureBox6.Image = image2;
-                pictureBox12.Image = image3;
-                pictureBox13.Image = image4;
-                pictureBox14.Image = image5;
+                pbVezir.Image = image;
+                pbFil2.Image = image2;
+                pbPiyon5.Image = image3;
+                pbPiyon4.Image = image4;
+                pbPiyon3.Image = image5;
             }
 
             isFirstClick = !isFirstClick;
@@ -447,9 +450,9 @@ namespace Chess
 
             else // İkinci tıklama
             {
-                tas("Kale", "önünde bir taş olmadığı takdirde ileriye, geriye, sola ve sağa doğru istenildiği kadar gidilebilir");
-                pictureBox20.BackColor = Color.Black;
-                pictureBox22.BackColor = Color.Black;
+                tas("At", "Satranç oyununda hareketi sırasında diğer taşların üzerinden atlayabilen tek taştır.");
+                pictureBox20.BackColor = Color.Transparent;
+                pictureBox22.BackColor = Color.Transparent;
             }
            isFirstClick = !isFirstClick;
         }
@@ -466,7 +469,7 @@ namespace Chess
             }
             else // İkinci tıklama
             {
-                tas("Kale", "önünde bir taş olmadığı takdirde ileriye, geriye, sola ve sağa doğru istenildiği kadar gidilebilir");
+                tas("At", "Satranç oyununda hareketi sırasında diğer taşların üzerinden atlayabilen tek taştır.");
                 pictureBox17.BackColor = Color.Black;
                 pictureBox31.BackColor = Color.Black;
 
@@ -478,8 +481,6 @@ namespace Chess
    public class Piyon : piece,Ipiyon
     {
         bool isFirstClick = true;
-        public int tıklanmaSayisi = 1;
-        public int tıklanmaSayisi2 = 1;
 
         public void piyon1(PictureBox pictureBox22, PictureBox pictureBox28)
         {
@@ -490,13 +491,13 @@ namespace Chess
                     {
                         pictureBox22.BackColor = Color.LightBlue;
 
-                        tıklanmaSayisi++;
+                        tıklanmaSayisi=2;
                     }
                     else if (tıklanmaSayisi == 2)
                     {
                         pictureBox22.BackColor = Color.LightBlue;
                         pictureBox28.BackColor = Color.LightBlue;
-                        tas("Kale", "önünde bir taş olmadığı takdirde ileriye, geriye, sola ve sağa doğru istenildiği kadar gidilebilir");
+                        tas("Piyon", "Satranç oyunundaki en zayıf ve sayıca en fazla olan taştır. ");
                         tıklanmaSayisi++;
                         if (tıklanmaSayisi == 3)
                         {
@@ -512,31 +513,200 @@ namespace Chess
             this.pictureBox21 = pictureBox21; this.pictureBox27 = pictureBox27;
             
             
-                if (tıklanmaSayisi2 == 1)
+                if (tıklanmaSayisi == 1)
                 {
-                    pictureBox21.BackColor = Color.LightBlue;
+                  pictureBox21.BackColor = Color.LightBlue;
 
-                    tıklanmaSayisi2++;
+                    tıklanmaSayisi=2;
                 }
-                else if (tıklanmaSayisi2 == 2)
+                else if (tıklanmaSayisi == 2)
                 {
                     pictureBox21.BackColor = Color.LightBlue;
                     pictureBox27.BackColor = Color.LightBlue;
-                    tas("Kale", "önünde bir taş olmadığı takdirde ileriye, geriye, sola ve sağa doğru istenildiği kadar gidilebilir");
-                    tıklanmaSayisi2++;
-                    if (tıklanmaSayisi2 == 3)
+                   tas("Piyon", "Satranç oyunundaki en zayıf ve sayıca en fazla olan taştır. ");
+                tıklanmaSayisi++;
+                    if (tıklanmaSayisi == 3)
                     {
                         pictureBox21.BackColor = Color.Black;
                         pictureBox27.BackColor = Color.Transparent;
-                        tıklanmaSayisi2 = 0;
+                        tıklanmaSayisi = 0;
                     }
                 }
 
 
            
         }
-            
-   }
+        public void piyon3(PictureBox pictureBox20, PictureBox pictureBox26)
+        {
+            this.pictureBox20 = pictureBox20; this.pictureBox26 = pictureBox26;
+
+
+            if (tıklanmaSayisi == 1)
+            {
+                pictureBox20.BackColor = Color.LightBlue;
+
+                tıklanmaSayisi=2;
+            }
+            else if (tıklanmaSayisi == 2)
+            {
+                pictureBox20.BackColor = Color.LightBlue;
+                pictureBox26.BackColor = Color.LightBlue;
+                tas("Piyon", "Satranç oyunundaki en zayıf ve sayıca en fazla olan taştır. ");
+                tıklanmaSayisi++;
+                if (tıklanmaSayisi == 3)
+                {
+                    pictureBox20.BackColor = Color.Transparent;
+                    pictureBox26.BackColor = Color.Black;
+                    tıklanmaSayisi = 0;
+                }
+            }
+
+
+
+        }
+        public void piyon4(PictureBox pictureBox19, PictureBox pictureBox25)
+        {
+            this.pictureBox19 = pictureBox19; this.pictureBox25 = pictureBox25;
+
+
+            if (tıklanmaSayisi == 1)
+            {
+                pictureBox19.BackColor = Color.LightBlue;
+
+                tıklanmaSayisi=2;
+            }
+            else if (tıklanmaSayisi == 2)
+            {
+                pictureBox19.BackColor = Color.LightBlue;
+                pictureBox25.BackColor = Color.LightBlue;
+                tas("Piyon", "Satranç oyunundaki en zayıf ve sayıca en fazla olan taştır. ");
+                tıklanmaSayisi++;
+                if (tıklanmaSayisi == 3)
+                {
+                    pictureBox19.BackColor = Color.Black;
+                    pictureBox25.BackColor = Color.Transparent;
+                    tıklanmaSayisi = 0;
+                }
+            }
+
+
+
+        }
+        public void piyon5(PictureBox pictureBox18, PictureBox pictureBox24)
+        {
+            this.pictureBox18 = pictureBox18; this.pictureBox24 = pictureBox24;
+
+
+            if (tıklanmaSayisi == 1)
+            {
+                pictureBox18.BackColor = Color.LightBlue;
+
+                tıklanmaSayisi=2;
+            }
+            else if (tıklanmaSayisi == 2)
+            {
+                pictureBox18.BackColor = Color.LightBlue;
+                pictureBox24.BackColor = Color.LightBlue;
+                tas("Piyon", "Satranç oyunundaki en zayıf ve sayıca en fazla olan taştır. ");
+                tıklanmaSayisi++;
+                if (tıklanmaSayisi == 3)
+                {
+                    pictureBox18.BackColor = Color.Transparent;
+                    pictureBox24.BackColor = Color.Black;
+                    tıklanmaSayisi = 0;
+                }
+            }
+
+
+
+        }
+        public void piyon6(PictureBox pictureBox17, PictureBox pictureBox23)
+        {
+            this.pictureBox17 = pictureBox17; this.pictureBox23 = pictureBox23;
+
+
+            if (tıklanmaSayisi == 1)
+            {
+                pictureBox17.BackColor = Color.LightBlue;
+
+                tıklanmaSayisi=2;
+            }
+            else if (tıklanmaSayisi == 2)
+            {
+                pictureBox17.BackColor = Color.LightBlue;
+                pictureBox23.BackColor = Color.LightBlue;
+                tas("Piyon", "Satranç oyunundaki en zayıf ve sayıca en fazla olan taştır. ");
+                tıklanmaSayisi++;
+                if (tıklanmaSayisi == 3)
+                {
+                    pictureBox17.BackColor = Color.Black;
+                    pictureBox23.BackColor = Color.Transparent;
+                    tıklanmaSayisi = 0;
+                }
+            }
+
+
+
+        }
+        public void piyon7(PictureBox pictureBox32, PictureBox pictureBox30)
+        {
+            this.pictureBox32 = pictureBox32; this.pictureBox30 = pictureBox30;
+
+
+            if (tıklanmaSayisi == 1)
+            {
+                pictureBox32.BackColor = Color.LightBlue;
+
+                tıklanmaSayisi=2;
+            }
+            else if (tıklanmaSayisi == 2)
+            {
+                pictureBox32.BackColor = Color.LightBlue;
+                pictureBox30.BackColor = Color.LightBlue;
+                tas("Piyon", "Satranç oyunundaki en zayıf ve sayıca en fazla olan taştır. ");
+                tıklanmaSayisi++;
+                if (tıklanmaSayisi == 3)
+                {
+                    pictureBox32.BackColor = Color.Transparent;
+                    pictureBox30.BackColor = Color.Black;
+                    tıklanmaSayisi = 0;
+                }
+            }
+
+
+
+        }
+        public void piyon8(PictureBox pictureBox31, PictureBox pictureBox29)
+        {
+            this.pictureBox31 = pictureBox31; this.pictureBox29 = pictureBox29;
+
+
+            if (tıklanmaSayisi == 1)
+            {
+                pictureBox31.BackColor = Color.LightBlue;
+
+                tıklanmaSayisi=2;
+            }
+            else if (tıklanmaSayisi == 2)
+            {
+                pictureBox31.BackColor = Color.LightBlue;
+                pictureBox29.BackColor = Color.LightBlue;
+                tas("Piyon", "Satranç oyunundaki en zayıf ve sayıca en fazla olan taştır. ");
+                tıklanmaSayisi++;
+                if (tıklanmaSayisi== 3)
+                {
+                    pictureBox31.BackColor = Color.Black;
+                    pictureBox29.BackColor = Color.Transparent;
+                    tıklanmaSayisi = 0;
+                }
+            }
+
+
+
+        }
+
+
+    }
     
 
 
