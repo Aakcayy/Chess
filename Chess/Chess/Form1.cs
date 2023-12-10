@@ -137,24 +137,19 @@ namespace Chess
             MessageBox.Show($"{icerik1}", $"{baslik1}");
         }
     }
-    interface Ikale1
+    interface Ikale
     {
 
         void kale1(PictureBox pictureBox9, PictureBox pictureBox8);
-    }
-    interface Ikale2
-    {
-
         void kale2(PictureBox pictureBox16, PictureBox pictureBox2);
     }
-    interface Ifil1
+   
+    interface Ifil
     {
         void fil1(PictureBox pictureBox13, PictureBox pictureBox15);
-    }
-    interface Ifil2
-    {
         void fil2(PictureBox pictureBox12, PictureBox pictureBox13);
     }
+    
     interface Isah
     {
 
@@ -165,23 +160,20 @@ namespace Chess
 
         void vezir(PictureBox pictureBox4, PictureBox pictureBox6, PictureBox pictureBox12, PictureBox pictureBox13, PictureBox pictureBox14);
     }
-    interface IAt1
+    interface IAt
     {
 
         void at1(PictureBox pictureBox20, PictureBox pictureBox22);
-    }
-    interface IAt2
-    {
-
         void at2(PictureBox pictureBox17, PictureBox pictureBox31);
     }
+   
     interface Ipiyon
     {
 
         void piyon1(PictureBox pictureBox22, PictureBox pictureBox28);
         void piyon2(PictureBox pictureBox21, PictureBox pictureBox27);
     }
-    public class castle : piece, Ikale1, Ikale2 // < Çoklu kalıtım yapıldı,castle sınıfı, piece sınıfından miras alarak tas metodunu override etti.
+    public class castle : piece, Ikale // < Çoklu kalıtım yapıldı,castle sınıfı, piece sınıfından miras alarak tas metodunu override etti.
     {
         bool isFirstClick = true;
 
@@ -256,7 +248,7 @@ namespace Chess
 
 
     }
-    public class Fil : piece, Ifil1, Ifil2
+    public class Fil : piece, Ifil
     {//29 10 7
         bool isFirstClick = true;
 
@@ -325,7 +317,7 @@ namespace Chess
 
 
     }
-    public class Sah : piece, Isah //Sah ve vezir
+    public class Sah : piece, Isah 
     {
         bool isFirstClick = true;
 
@@ -379,7 +371,7 @@ namespace Chess
             isFirstClick = !isFirstClick;
         }
     }
-    public class Vezir : piece, Ivezir //Sah ve vezir
+    public class Vezir : piece, Ivezir 
     {
         bool isFirstClick = true;
 
@@ -433,7 +425,7 @@ namespace Chess
             isFirstClick = !isFirstClick;
         }
     }
-    public class At : piece,IAt1,IAt2
+    public class At : piece,IAt
     {
         bool isFirstClick = true;
 
@@ -456,8 +448,8 @@ namespace Chess
             else // İkinci tıklama
             {
                 tas("Kale", "önünde bir taş olmadığı takdirde ileriye, geriye, sola ve sağa doğru istenildiği kadar gidilebilir");
-                pictureBox20.BackColor = Color.Transparent;
-                pictureBox22.BackColor = Color.Transparent;
+                pictureBox20.BackColor = Color.Black;
+                pictureBox22.BackColor = Color.Black;
             }
            isFirstClick = !isFirstClick;
         }
@@ -475,8 +467,8 @@ namespace Chess
             else // İkinci tıklama
             {
                 tas("Kale", "önünde bir taş olmadığı takdirde ileriye, geriye, sola ve sağa doğru istenildiği kadar gidilebilir");
-                pictureBox17.BackColor = Color.Transparent;
-                pictureBox31.BackColor = Color.Transparent;
+                pictureBox17.BackColor = Color.Black;
+                pictureBox31.BackColor = Color.Black;
 
             }
             isFirstClick = !isFirstClick;

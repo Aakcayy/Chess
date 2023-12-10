@@ -474,7 +474,7 @@
             // 
             // pictureBox31
             // 
-            this.pictureBox31.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox31.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox31.Location = new System.Drawing.Point(944, 609);
             this.pictureBox31.Name = "pictureBox31";
             this.pictureBox31.Size = new System.Drawing.Size(145, 95);
