@@ -81,15 +81,49 @@ namespace Chess
 
         private void pictureBox16_Click(object sender, EventArgs e)
         {
-            piyon.piyon1(pictureBox20, pictureBox22,pictureBox16,pictureBox21, pictureBox15,pictureBox28);
+            piyon.piyon1(pictureBox20, pictureBox22);
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            piyon.piyon2(pictureBox21, pictureBox22);
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            piyon.piyon1(pictureBox17, pictureBox21);
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            piyon.piyon1(pictureBox23,pictureBox24);
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            piyon.piyon1(pictureBox25, pictureBox26);
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            piyon.piyon1(pictureBox27, pictureBox28);
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            piyon.piyon1(pictureBox29, pictureBox30);
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            piyon.piyon1(pictureBox31, pictureBox32);
         }
     }
     public class piece
     {
-        public PictureBox pictureBox7;
-        public PictureBox pictureBox8;
-        public PictureBox pictureBox9;
-        public PictureBox pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox10, pictureBox11, pictureBox12, pictureBox15, pictureBox13, pictureBox14, pictureBox16, pictureBox17, pictureBox20, pictureBox22, pictureBox28, pictureBox31,pictureBox21;
+        public PictureBox pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9;
+        public PictureBox pictureBox10, pictureBox11, pictureBox12, pictureBox15, pictureBox13, pictureBox14, pictureBox16, pictureBox17, pictureBox20, pictureBox22, pictureBox28, pictureBox23,pictureBox21,pictureBox27;
+        public PictureBox pictureBox29, pictureBox30, pictureBox31, pictureBox32, pictureBox18, pictureBox19, pictureBox24, pictureBox25, pictureBox26;
         public string baslik1;
         public string icerik1;
        
@@ -144,7 +178,8 @@ namespace Chess
     interface Ipiyon
     {
 
-        void piyon1(PictureBox pictureBox20, PictureBox pictureBox22, PictureBox pictureBox16, PictureBox pictureBox21, PictureBox pictureBox15, PictureBox pictureBox28);
+        void piyon1(PictureBox pictureBox22, PictureBox pictureBox28);
+        void piyon2(PictureBox pictureBox21, PictureBox pictureBox27);
     }
     public class castle : piece, Ikale1, Ikale2 // < Çoklu kalıtım yapıldı,castle sınıfı, piece sınıfından miras alarak tas metodunu override etti.
     {
@@ -448,99 +483,69 @@ namespace Chess
         }
     }
 
-    /* public class secme:piece
-     { 
-         public PictureBox[] Picture { get; set; }
-         private bool isFirstClick = true;
-
-         public secme1()
-         {
-             Picture = new PictureBox[7];
-             PictureBox9 = new PictureBox(); // PictureBox9'u oluştur
-                                             // Her PictureBox için tıklama olayını tanımla
-             for (int i = 0; i < Picture.Length; i++)
-             {
-                 int index = i; // Lambda ifadesi içinde değişkenin doğru kullanımı için
-                 Picture[i] = new PictureBox(); // PictureBox örneğini oluştur
-                 Picture[i].Click += (sender, e) => PictureBox_Click(index);
-             }
-             // PictureBox9 için tıklama olayını tanımla
-             PictureBox9.Click += (sender, e) => PictureBox_Click(8); // Örnek olarak 8. index'i kullanıyoruz
-         }
-     }
-
-         private void PictureBox_Click(int pictureBoxIndex)
-         {
-             // Tıklanan PictureBox'ın parametrelerini al ve işlem yap
-             PictureBox clickedPictureBox = Picture[pictureBoxIndex];
-             // İşlem yapılacak kodu buraya ekleyebilirsiniz
-             if (isFirstClick) //ilk tıklama
-             {
-                 clickedPictureBox.BackColor = Color.LightBlue;
-             }
-             else // İkinci tıklama
-             {
-                 //tas("Kale", "önünde bir taş olmadığı takdirde ileriye, geriye, sola ve sağa doğru istenildiği kadar gidilebilir");
-                 clickedPictureBox.BackColor = Color.Transparent;
-             }
-             isFirstClick = !isFirstClick;
-              MessageBox.Show($"Tıklanan PictureBox: {pictureBoxIndex + 1}");
-         }
-     }*/
-    
-    public class Piyon : piece,Ipiyon
+   public class Piyon : piece,Ipiyon
     {
         bool isFirstClick = true;
-        public int tıklanmaSayisi = 0;
+        public int tıklanmaSayisi = 1;
+        public int tıklanmaSayisi2 = 1;
 
-
-        public void piyon1(PictureBox pictureBox20, PictureBox pictureBox22, PictureBox pictureBox16, PictureBox pictureBox21, PictureBox pictureBox15, PictureBox pictureBox28)
+        public void piyon1(PictureBox pictureBox22, PictureBox pictureBox28)
         {
-            this.pictureBox20 = pictureBox20;
-            this.pictureBox21 = pictureBox21;
-            this.pictureBox22 = pictureBox22;
-            this.pictureBox15 = pictureBox15;
-            this.pictureBox16 = pictureBox16;
-            this.pictureBox28 = pictureBox28;
-            pictureBox16.Click += (sender, e) =>
-            {
-                tıklanmaSayisi++;
-                if (tıklanmaSayisi == 1)
-                {
-                    pictureBox22.BackColor = Color.LightBlue;
-                    tas("Kale", "önünde bir taş olmadığı takdirde ileriye, geriye, sola ve sağa doğru istenildiği kadar gidilebilir");
-                    tıklanmaSayisi ++;
-                }
-                else if (tıklanmaSayisi == 2)
-                {
-                    pictureBox22.BackColor = Color.LightBlue;
-                    pictureBox28.BackColor = Color.LightBlue;
-                    tıklanmaSayisi=0;
-                }
-                
+            this.pictureBox22 = pictureBox22; this.pictureBox28 = pictureBox28;
                
-            };
-            pictureBox15.Click += (sender, e) =>
-            {
-                tıklanmaSayisi++;
-                if (tıklanmaSayisi == 1)
+            
+                    if (tıklanmaSayisi == 1)
+                    {
+                        pictureBox22.BackColor = Color.LightBlue;
+
+                        tıklanmaSayisi++;
+                    }
+                    else if (tıklanmaSayisi == 2)
+                    {
+                        pictureBox22.BackColor = Color.LightBlue;
+                        pictureBox28.BackColor = Color.LightBlue;
+                        tas("Kale", "önünde bir taş olmadığı takdirde ileriye, geriye, sola ve sağa doğru istenildiği kadar gidilebilir");
+                        tıklanmaSayisi++;
+                        if (tıklanmaSayisi == 3)
+                        {
+                            pictureBox22.BackColor = Color.Transparent;
+                            pictureBox28.BackColor = Color.Black;
+                            tıklanmaSayisi = 0;
+                        }
+                    }
+               
+        }
+        public void piyon2(PictureBox pictureBox21, PictureBox pictureBox27)
+        {
+            this.pictureBox21 = pictureBox21; this.pictureBox27 = pictureBox27;
+            
+            
+                if (tıklanmaSayisi2 == 1)
                 {
                     pictureBox21.BackColor = Color.LightBlue;
-                    tas("Kale", "önünde bir taş olmadığı takdirde ileriye, geriye, sola ve sağa doğru istenildiği kadar gidilebilir");
-                    tıklanmaSayisi++;
+
+                    tıklanmaSayisi2++;
                 }
-                else if (tıklanmaSayisi == 2)
+                else if (tıklanmaSayisi2 == 2)
                 {
-                    pictureBox21.BackColor = Color.White;
-                    tıklanmaSayisi++;
+                    pictureBox21.BackColor = Color.LightBlue;
+                    pictureBox27.BackColor = Color.LightBlue;
+                    tas("Kale", "önünde bir taş olmadığı takdirde ileriye, geriye, sola ve sağa doğru istenildiği kadar gidilebilir");
+                    tıklanmaSayisi2++;
+                    if (tıklanmaSayisi2 == 3)
+                    {
+                        pictureBox21.BackColor = Color.Black;
+                        pictureBox27.BackColor = Color.Transparent;
+                        tıklanmaSayisi2 = 0;
+                    }
                 }
-               
 
-                
-            };
 
+           
         }
-    }
+            
+   }
+    
 
 
 }
